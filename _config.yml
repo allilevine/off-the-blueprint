@@ -1,0 +1,29 @@
+gems:
+  - bourbon
+  - neat
+  - octopress-autoprefixer
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Structure configuration
+source: source
+destination: build
+
+assets:
+  cachebust: soft
+
+# Site settings
+title: Off the Blueprint
+description: Minimalist Packing, Train Travel, Independent Travel
+permalink: /:categories/:title/
+twitter:
+  username: allilevine
+logo: /assets/logo.png
+author: allilevine
+
+# Name of project on Github
+baseurl:
+url: http://offtheblueprint.com
+
+# Build settings
+markdown: kramdown

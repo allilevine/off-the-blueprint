@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="container scene_element--fadein scene_element">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <h2 class="article-meta">{% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>, {% endif %}{% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %Y" }}</time>{% endif %}</h2>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <div class="emailme">Questions? <a href="/contact-me/">Email me</a></div>
+
+</article>

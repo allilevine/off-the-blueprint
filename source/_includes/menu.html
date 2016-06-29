@@ -1,0 +1,35 @@
+  <div class="left">
+    <h2>Minimalist Packing</h2>
+    <ul>
+      <li>
+        <a href="/minimalist-packing-list/">My Minimalist Packing List</a>
+      </li><li>
+        <a href="/minimalist-packing-tips/">Minimalist Packing Tips</a>
+      </li>
+    </ul>
+    <h2>Allison's Posts</h2>
+    <ul class="medium-articles">
+
+    </ul>
+  </div>
+  <div class="right">
+    <h2>Train Travel</h2>
+    <ul>
+      <li>
+        <a href="/tips-for-taking-long-distance-amtrak-trains-sleeper-and-coach/">Tips for Taking Long-Distance Amtrak Trains, Sleeper and Coach</a>
+      </li><li>
+        <a href="/tips-for-taking-via-rails-the-canadian-sleeper-plus-and-coach/">Tips for Taking Via Rail's The Canadian, Sleeper Plus and Coach</a>
+      </li>
+      <li>
+        <a href="/tips-for-taking-long-distance-trains-in-uk-europe/">Tips for Taking Long-Distance Trains in the UK and Europe</a>
+      </li>
+    </ul>
+    <h2>Guest Posts</h2>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>

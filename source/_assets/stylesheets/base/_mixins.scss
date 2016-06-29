@@ -1,0 +1,27 @@
+@mixin twocolumncontainer {
+  background: white;
+  width: 100%;
+  padding: 2em;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include media ($large-screen) {
+    width: 700px;
+  }
+
+  .left, .right {
+    margin-bottom: 1em;
+  }
+  @include media($large-screen) {
+    .left, .right {
+      width: 46%;
+      margin-bottom: 0;
+    }
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+  }
+}

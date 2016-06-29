@@ -1,0 +1,29 @@
+I"Í(function() {
+  $(document).ready(function() {});
+
+  $.ajax({
+    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('https://medium.com/feed/@allilevine'),
+    dataType: 'json',
+    success: function(data) {
+      var docfrag, ul;
+      if (data.responseData.feed && data.responseData.feed.entries) {
+        ul = document.getElementsByTagName('.medium-articles')[0];
+        docfrag = document.createDocumentFragment();
+        $.each(data.responseData.feed.entries, function(i, e) {
+          var li;
+          li = document.createElement("li");
+          console.log('------------------------');
+          console.log('title      : ' + e.title);
+          console.log('link: ' + e.link);
+          li.textContent = '<a href="' + e.link + '">' + e.title + '</a>';
+          docfrag.appendChild(li);
+        });
+        ul.appendChild(docfrag);
+      }
+    }
+  });
+
+  return;
+
+}).call(this);
+:ET
