@@ -721,6 +721,10 @@ article.container p.footnote {
 article.container ul.bulleted {
   list-style-type: disc;
   margin-left: 1em; }
+article.container ol {
+  list-style-type: decimal;
+  margin-bottom: 1.5em;
+  padding: 0 1em; }
 
 .emailme {
   font-style: italic;
